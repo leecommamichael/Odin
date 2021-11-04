@@ -92,7 +92,7 @@ foreign lib {
 	LockTexture                  :: proc(texture:  ^Texture, rect: ^Rect, pixels: ^rawptr, pitch: ^c.int) -> c.int ---
 	LockTextureToSurface         :: proc(texture:  ^Texture, rect: ^Rect, surface: ^^Surface) -> c.int ---
 	UnlockTexture                :: proc(texture:  ^Texture) ---
-	RenderTargetSupported        :: proc(renderer: ^PixelFormatEnum) -> bool ---
+	RenderTargetSupported        :: proc(renderer: ^Renderer) -> bool ---
 	SetRenderTarget              :: proc(renderer: ^Renderer, texture: ^Texture) -> c.int ---
 	GetRenderTarget              :: proc(renderer: ^Renderer) -> ^Texture ---
 	RenderSetLogicalSize         :: proc(renderer: ^Renderer, w, h: c.int) -> c.int ---
